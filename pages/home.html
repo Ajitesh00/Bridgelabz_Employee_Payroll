@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Payroll</title>
+  <link rel="stylesheet" href="/styles/home.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="/assets/input-onlinepngtools.png" alt="Logo" class="logo">
+			<div class="headings">
+      	<h1 style="color: yellowgreen;">EMPLOYEE</h1>
+				<h1>PAYROLL</h1>
+			</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="title-section">
+      <h2>Employee Details</h2>
+      <div class="actions">
+        <input class="search">
+        <button onclick="window.location.href='../Pages/add_employee.html'" class="add-user-btn">Add User</button>
+      </div>
+    </div>
+
+    <table class="emp-table">
+      <thead>
+        <tr>
+          <th>NAME</th>
+          <th>GENDER</th>
+          <th>DEPARTMENT</th>
+          <th>SALARY</th>
+          <th>START DATE</th>
+          <th>ACTIONS</th>
+        </tr>
+      </thead>
+      <tbody id="employee-table-body">
+        <!-- JS populated -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="../Script/script.js"></script>
+</body>
+</html>

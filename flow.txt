@@ -1,0 +1,25 @@
+Validation in case details are emplty NOT ALLOWED
+
+Submit pe data should be stored in local storage
+
+Local storage se get karke dashboard pe display
+
+Reset pe form should be cleared
+
+Cancel pe redirected to dashboard
+
+abhi DOM methods se
+
+Duplicate value prevent karni hai
+
+GET karke tabular form mei dikhana
+
+Returned value will be object jisme dept hamara array hai jo finally dashboard pe display hoga
+
+2 branches one for dom methods and ek jab Jquerry ke sath karenge
+
+Emplyee Payroll
+  Assets
+  Pages
+  Script
+  Style

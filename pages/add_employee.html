@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Employee</title>
+  <link rel="stylesheet" href="/styles/add_employee.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="/assets/input-onlinepngtools.png" alt="Logo" class="logo">
+      <div class="headings">
+      	<h1 style="color: yellowgreen;">EMPLOYEE</h1>
+				<h1>PAYROLL</h1>
+			</div>
+    </div>
+  </header>
+
+  <main>
+    <form id="payroll-form">
+      <h2>Employee Payroll Form</h2>
+			
+			<div class="name-flex">
+				<label>Name:
+					<input id="inputName" required>
+				</label>
+			</div>
+
+			<div class="flex-check">
+			<label>Profile image:</label>
+			<div class=""style="margin-left: 15px; display: flex; gap: 50px;">
+				<label><input type="radio" name="profileImageOptions" value="../Assets/profile1.png"><img src="../Assets/profile2.png"></label>
+				<label><input type="radio" name="profileImageOptions" value="../Assets/profile2.png"><img src="../Assets/profile2.png"></label>
+				<label><input type="radio" name="profileImageOptions" value="../Assets/profile3.png"><img src="../Assets/profile3.png"></label>
+				<label><input type="radio" name="profileImageOptions" value="../Assets/profile4.png"><img src="../Assets/profile4.png"></label>
+			</div>
+			</div>
+
+			<div class="flex-check">
+				<label>Gender:</label>
+				<div style="margin-left: 55px; display: flex; gap: 27px;">
+					<label><input type="radio" name="genderRadioOptions" value="Male"> Male</label>
+					<label><input type="radio" name="genderRadioOptions" value="Female"> Female</label>
+				</div>
+			</div>
+
+			<div class="flex-check">
+				<label>Department:</label>
+				<div style="margin-left: 26px; display: flex; gap: 40px;">
+					<label><input type="checkbox" name="departmentOptions" value="HR"> HR</label>
+					<label><input type="checkbox" name="departmentOptions" value="Sales"> Sales</label>
+					<label><input type="checkbox" name="departmentOptions" value="Finance"> Finance</label>
+					<label><input type="checkbox" name="departmentOptions" value="Consultancy"> Consultancy</label>
+					<label><input type="checkbox" name="departmentOptions" value="Other"> Other</label>
+				</div>
+			</div>
+
+			<div class="flex-check">
+				<label>Salary:
+					<select id="salaryRange" style="margin-left: 94px;" required>
+						<option value="">Select Salary</option>
+						<option value="₹ 10,000">₹ 10,000</option>
+						<option value="₹ 20,000">₹ 20,000</option>
+						<option value="₹ 30,000">₹ 30,000</option>
+						<option value="₹ 40,000">₹ 40,000</option>
+						<option value="₹ 50,000">₹ 50,000</option>
+					</select>
+				</label>
+			</div>
+
+			<div class="flex-check" style="align-items: center;">
+				<label>Start Date:</label>
+				<select id="date" style="margin-left: 40px;"><option value="">Date</option></select>
+				<select id="month"><option value="">Month</option></select>
+				<select id="year"><option value="">Year</option></select>
+			</div>
+			
+			<div class="flex-check">
+				<label>Notes:
+					<textarea id="Textarea1" style="margin-left: 97px;"></textarea>
+				</label>
+			</div>
+
+      <div class="form-actions" style="margin-top: 40px;">
+        <button type="button" id="cancelBtn">Cancel</button>
+				<button type="reset" id="resetBtn" style="margin-left: 718px; margin-right: 20px;">Reset</button>
+        <button type="submit" id="submitBtn">Submit</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="../Script/addEmployee.js"></script>
+</body>
+</html>
