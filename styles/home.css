@@ -11,6 +11,20 @@ header {
   border-bottom: 1px solid #ccc;
 }
 
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a:visited {
+  color: inherit;
+}
+
+header a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header-left {
   display: flex;
   align-items: center;
@@ -123,4 +137,28 @@ main {
   padding: 2px 6px;
   border-radius: 4px;
   margin-right: 4px;
+}
+
+.delete-btn {
+  background: url('/assets/delete.png') no-repeat center;
+  background-size: 20px 20px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1em;
+  outline: none;
+  background-color: transparent;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.delete-btn:hover {
+  opacity: 0.6;
+}
+
+.emp-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

@@ -18,6 +18,12 @@ Returned value will be object jisme dept hamara array hai jo finally dashboard p
 
 2 branches one for dom methods and ek jab Jquerry ke sath karenge
 
+Jquery CDN add in script tag
+
+Json server install
+
+Db.json use in ajax http methods for get/post/put, etc.
+
 Emplyee Payroll
   Assets
   Pages
