@@ -1,41 +1,17 @@
 {
   "employees": [
     {
-      "id": "7beb",
-      "name": "Om",
-      "profileImage": "../Assets/profile4.png",
-      "gender": "Male",
-      "departments": [
-        "HR"
-      ],
-      "salary": "₹ 50,000",
-      "startDate": "8-August-2010",
-      "notes": "Hello"
-    },
-    {
-      "id": "1b61",
-      "name": "Dipin",
-      "profileImage": "../Assets/profile2.png",
-      "gender": "Male",
-      "departments": [
-        "Sales",
-        "Finance"
-      ],
-      "salary": "₹ 50,000",
-      "startDate": "5-November-2008",
-      "notes": "Hello"
-    },
-    {
-      "id": "927a",
+      "id": "c200",
       "name": "Ajitesh",
       "profileImage": "../Assets/profile1.png",
       "gender": "Male",
       "departments": [
-        "HR"
+        "HR",
+        "Sales"
       ],
-      "salary": "₹ 50,000",
-      "startDate": "8-August-2010",
-      "notes": "Hello"
+      "salary": "₹ 40,000",
+      "startDate": "20-October-2017",
+      "notes": "Good"
     }
   ]
 }

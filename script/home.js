@@ -91,6 +91,7 @@ $(document).ready(function () {
               <td>${emp.salary}</td>
               <td>${emp.startDate}</td>
               <td>
+                <button class="edit-btn" data-id="${emp.id}" title="Edit"></button>
                 <button class="delete-btn" data-id="${emp.id}" title="Delete"></button>
               </td>
             </tr>
@@ -118,4 +119,11 @@ $(document).ready(function () {
       }
     });
   });
+
+  $('#employee-table-body').on('click', '.edit-btn', function () {
+  const id = $(this).data('id');
+  localStorage.setItem('editEmployeeId', id);
+  window.location.href = '../pages/add_employee.html';
+});
+
 });

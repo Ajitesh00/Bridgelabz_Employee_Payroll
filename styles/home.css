@@ -157,6 +157,23 @@ main {
   opacity: 0.6;
 }
 
+.edit-btn {
+  background: url('/assets/edit.png') no-repeat center;
+  background-size: 20px 20px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1em;
+  background-color: transparent;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.edit-btn:hover {
+  opacity: 0.6;
+}
+
 .emp-name-cell {
   display: flex;
   align-items: center;
