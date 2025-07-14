@@ -1,7 +1,6 @@
 {
   "employees": [
     {
-      "id": "c200",
       "name": "Ajitesh",
       "profileImage": "../Assets/profile1.png",
       "gender": "Male",
@@ -11,7 +10,8 @@
       ],
       "salary": "₹ 40,000",
       "startDate": "20-October-2017",
-      "notes": "Good"
+      "notes": "Good",
+      "id": "c200"
     }
   ]
 }
