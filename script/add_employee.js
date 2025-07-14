@@ -177,17 +177,32 @@ $(document).ready(function () {
       notes
     };
 
-    $.ajax({
-      url: 'http://localhost:3000/employees',
-      type: 'POST',
-      data: JSON.stringify(employee),
-      contentType: 'application/json',
-      success: function () {
-        window.location.href = '../pages/home.html';
-      },
-      error: function (err) {
-        console.error('Error saving employee:', err);
+    // Duplicate check before saving
+    $.get('http://localhost:3000/employees', function (existingEmployees) {
+      const isDuplicate = existingEmployees.some(emp =>
+        emp.name === name &&
+        emp.gender === gender &&
+        emp.startDate === startDate
+      );
+
+      if (isDuplicate) {
+        alert("Duplicate employee entry.");
+        return;
       }
+
+      // Add to server if not duplicate
+      $.ajax({
+        url: 'http://localhost:3000/employees',
+        type: 'POST',
+        data: JSON.stringify(employee),
+        contentType: 'application/json',
+        success: function () {
+          window.location.href = '../pages/home.html';
+        },
+        error: function (err) {
+          console.error('Error saving employee:', err);
+        }
+      });
     });
   });
 });

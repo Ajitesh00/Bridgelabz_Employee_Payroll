@@ -24,6 +24,8 @@ Json server install
 
 Db.json use in ajax http methods for get/post/put, etc.
 
+display kaise karna hai check it.
+
 Emplyee Payroll
   Assets
   Pages
