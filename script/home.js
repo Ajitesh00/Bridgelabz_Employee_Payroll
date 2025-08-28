@@ -1,69 +1,3 @@
-// function loadEmployees() {
-//   const employees = JSON.parse(localStorage.getItem("employees")) || [];
-//   const tableBody = document.getElementById("employee-table-body");
-//   tableBody.innerHTML = "";
-
-//   employees.forEach((emp, index) => {
-//     const row = document.createElement("tr");
-
-//     // Name & Profile
-//     const nameCell = document.createElement("td");
-//     nameCell.innerHTML = `
-// 			<div class="emp-name-cell">
-//       <img class="profile-img" src="${emp.profileImage}" alt="Profile">
-//       <span>${emp.name}</span>
-// 			</div>
-//     `;
-//     row.appendChild(nameCell);
-
-//     // Gender
-//     const genderCell = document.createElement("td");
-//     genderCell.textContent = emp.gender;
-//     row.appendChild(genderCell);
-
-//     // Department (as badges)
-//     const deptCell = document.createElement("td");
-//     emp.departments.forEach(dep => {
-//       const badge = document.createElement("span");
-//       badge.className = "badge";
-//       badge.textContent = dep;
-//       deptCell.appendChild(badge);
-//     });
-//     row.appendChild(deptCell);
-
-//     // Salary
-//     const salaryCell = document.createElement("td");
-//     salaryCell.textContent = emp.salary;
-//     row.appendChild(salaryCell);
-
-//     // Start Date
-//     const dateCell = document.createElement("td");
-//     dateCell.textContent = emp.startDate;
-//     row.appendChild(dateCell);
-
-//     // Actions (Delete)
-//     const actionCell = document.createElement("td");
-//     const deleteBtn = document.createElement("button");
-//     deleteBtn.className = "delete-btn";
-//     deleteBtn.title = "Delete";
-//     deleteBtn.addEventListener("click", () => deleteEmployee(index));
-//     actionCell.appendChild(deleteBtn);
-//     row.appendChild(actionCell);
-
-//     tableBody.appendChild(row);
-//   });
-// }
-
-// function deleteEmployee(index) {
-//   const data = JSON.parse(localStorage.getItem("employees")) || [];
-//   data.splice(index, 1);
-//   localStorage.setItem("employees", JSON.stringify(data));
-//   loadEmployees();
-// }
-
-// window.onload = loadEmployees;
-
-
 $(document).ready(function () {
   getStoredUsers();
 
@@ -76,13 +10,13 @@ $(document).ready(function () {
         $tbody.empty();
 
         employees.forEach(emp => {
-          const departments = emp.departments.map(dep => `<span class="badge">${dep}</span>`).join('');
+          const departments = emp.departments.map(dep => `<span class="inline-block bg-lime-200 text-gray-800 px-2 py-1 rounded mr-1">${dep}</span>`).join('');
 
           const row = `
             <tr>
               <td>
-                <div class="emp-name-cell">
-                  <img class="profile-img" src="${emp.profileImage}" alt="Profile">
+                <div class="flex items-center gap-2">
+                  <img class="w-8 h-8 rounded-full" src="${emp.profileImage}" alt="Profile">
                   <span>${emp.name}</span>
                 </div>
               </td>
@@ -91,8 +25,8 @@ $(document).ready(function () {
               <td>${emp.salary}</td>
               <td>${emp.startDate}</td>
               <td>
-                <button class="edit-btn" data-id="${emp.id}" title="Edit"></button>
-                <button class="delete-btn" data-id="${emp.id}" title="Delete"></button>
+                <button class="btn bg-transparent border-none p-0 m-0 w-8 h-8 bg-[url('/assets/edit.png')] bg-no-repeat bg-center bg-[length:20px_20px] hover:opacity-60" data-id="${emp.id}" title="Edit"></button>
+                <button class="btn bg-transparent border-none p-0 m-0 w-8 h-8 bg-[url('/assets/delete.png')] bg-no-repeat bg-center bg-[length:20px_20px] hover:opacity-60 ms-2" data-id="${emp.id}" title="Delete"></button>
               </td>
             </tr>
           `;
@@ -106,7 +40,7 @@ $(document).ready(function () {
   }
 
   // Delete handler using delegation
-  $('#employee-table-body').on('click', '.delete-btn', function () {
+  $('#employee-table-body').on('click', '.btn[title="Delete"]', function () {
     const id = $(this).data('id');
     $.ajax({
       url: `http://localhost:3000/employees/${id}`,
@@ -120,10 +54,9 @@ $(document).ready(function () {
     });
   });
 
-  $('#employee-table-body').on('click', '.edit-btn', function () {
-  const id = $(this).data('id');
-  localStorage.setItem('editEmployeeId', id);
-  window.location.href = '../pages/add_employee.html';
-});
-
+  $('#employee-table-body').on('click', '.btn[title="Edit"]', function () {
+    const id = $(this).data('id');
+    localStorage.setItem('editEmployeeId', id);
+    window.location.href = '../pages/add_employee.html';
+  });
 });
