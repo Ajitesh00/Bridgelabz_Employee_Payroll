@@ -1,6 +1,21 @@
 {
   "employees": [
     {
+      "id": "6c92",
+      "name": "Manya",
+      "profileImage": "../Assets/profile2.png",
+      "gender": "Female",
+      "departments": [
+        "Sales",
+        "Finance",
+        "Consultancy"
+      ],
+      "salary": "₹ 50,000",
+      "startDate": "28-September-2017",
+      "notes": "Good"
+    },
+    {
+      "id": "0ed2",
       "name": "Ajitesh",
       "profileImage": "../Assets/profile1.png",
       "gender": "Male",
@@ -8,10 +23,9 @@
         "HR",
         "Sales"
       ],
-      "salary": "₹ 40,000",
-      "startDate": "20-October-2017",
-      "notes": "Good",
-      "id": "c200"
+      "salary": "₹ 50,000",
+      "startDate": "15-November-2015",
+      "notes": "Good"
     }
   ]
 }
